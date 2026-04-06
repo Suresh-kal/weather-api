@@ -1,10 +1,12 @@
 const express = require("express");
 const axios = require("axios");
-const { timeStamp } = require("node:console");
+const cors = require("cors");
 require("dotenv").config();
 
 const app = express();
-PORT = 3000;
+app.use(cors());
+
+const PORT = process.env.PORT || 3000;
 app.get("/api/v1/weather/:city", async (req, res) => {
   try {
     const city = req.params.city;
