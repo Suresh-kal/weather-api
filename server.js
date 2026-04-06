@@ -39,7 +39,7 @@ app.get("/api/v1/weather/:city", async (req, res) => {
           value: data.main.pressure,
           unit: "hPa",
         },
-        weather_status: data.weather[0].description,
+        weatherStatus: data.weather[0].description,
       },
     });
   } catch (error) {
