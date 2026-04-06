@@ -19,7 +19,7 @@ app.get("/api/v1/weather/:city", async (req, res) => {
       timestamp: new Date().toISOString(),
       data: {
         city: data.name,
-        temparature: {
+        temperature: {
           value: data.main.temp,
           unit: "celsius",
         },
